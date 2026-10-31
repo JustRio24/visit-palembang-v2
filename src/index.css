@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* MUSI PERAK — palet monokrom: tinta sungai, perak cahaya, kertas */
+  --color-ink: #0c0c0d;
+  --color-coal: #141416;
+  --color-smoke: #232326;
+  --color-fog: #8b897f;
+  --color-silver: #c8c6c1;
+  --color-paper: #f2efe9;
+  --color-bone: #e7e3d9;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Scrollbar bawaan disembunyikan — digantikan bilah kemajuan
+     di tepi atas layar (komponen ScrollProgress). */
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* Semua fotografi diperlakukan monokrom — dunia "Musi Perak".
+   Warnanya hidup saat gambar dihover, difokus, atau kartunya dihover. */
+.foto-perak {
+  filter: grayscale(1) contrast(1.06) brightness(0.97);
+  transition: filter 0.7s ease;
+}
+.foto-perak:hover,
+.foto-perak:focus-visible,
+.group:hover .foto-perak,
+.group:focus-within .foto-perak {
+  filter: grayscale(0) contrast(1.02) brightness(1);
+}
+
+/* Video Prolog mengikuti aturan yang sama lewat pembungkusnya */
+.video-perak {
+  filter: grayscale(1) contrast(1.05);
+  transition: filter 0.7s ease;
+}
+.video-perak:hover,
+.video-perak:focus-within {
+  filter: grayscale(0) contrast(1);
+}
+
+/* Angka babak raksasa di latar */
+.angka-babak {
+  -webkit-text-stroke: 1px color-mix(in srgb, currentColor 26%, transparent);
+  color: transparent;
+}
+
+/* Pita berjalan perpisahan di kaki Penutup */
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee-x 30s linear infinite;
+}
