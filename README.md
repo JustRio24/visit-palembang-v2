@@ -1,5 +1,7 @@
 # Visit Palembang v2 — Menyusuri Musi
 
+![Visit Palembang — Menara Ampera di malam hari di atas Sungai Musi](public/images/og-cover.jpg)
+
 > Sebuah perjalanan scroll sinematik satu halaman menyusuri Palembang:
 > dari video Sungai Musi yang digerakkan guliran, galeri menyamping,
 > halaman arsip yang terbakar, panggung rasa, sampai gerbang Ampera
