@@ -39,7 +39,7 @@ export default function Prolog() {
             style={{ opacity: frameOpacity }}
             className="flex items-start justify-between font-mono text-[11px] tracking-[0.25em] text-paper/80"
           >
-            <span>VISIT PALEMBANG — V2</span>
+            <span>VISIT PALEMBANG<span className="hidden sm:inline"> — V2</span></span>
             <span className="hidden sm:block">2.9761° S · 104.7754° E</span>
             <span>{ui.prologEst[lang]}</span>
           </motion.div>
@@ -48,10 +48,10 @@ export default function Prolog() {
             style={{ opacity: titleOpacity, y: titleY }}
             className="text-center"
           >
-            <p className="mb-5 font-mono text-[11px] tracking-[0.35em] text-paper/70">
+            <p className="mb-5 font-mono text-[11px] tracking-[0.22em] text-paper/70 md:tracking-[0.35em]">
               {ui.prologKicker[lang]}
             </p>
-            <h1 className="font-display text-[17vw] leading-[0.9] font-semibold tracking-tight text-paper md:text-[11rem]">
+            <h1 className="font-display text-[12.5vw] leading-[0.9] font-semibold tracking-tight text-paper md:text-[11rem]">
               PALEMBANG
             </h1>
             <p className="mx-auto mt-6 max-w-xl font-display text-lg text-paper/85 italic md:text-2xl">

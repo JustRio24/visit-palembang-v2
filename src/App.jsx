@@ -1,6 +1,8 @@
 import { Fragment } from 'react'
 import NavRail from './components/NavRail.jsx'
 import ScrollProgress from './components/ScrollProgress.jsx'
+import Preloader from './components/Preloader.jsx'
+import CursorRibbons from './components/CursorRibbons.jsx'
 import Prolog from './components/Prolog.jsx'
 import Manifesto from './components/Manifesto.jsx'
 import RasaShowcase from './components/RasaShowcase.jsx'
@@ -22,6 +24,8 @@ import { LangToggle, LanguageProvider } from './i18n.jsx'
 export default function App() {
   return (
     <LanguageProvider>
+    <Preloader />
+    <CursorRibbons />
     <main className="bg-ink font-sans">
       <ScrollProgress />
       <NavRail />

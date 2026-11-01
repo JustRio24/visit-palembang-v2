@@ -162,7 +162,7 @@ export default function RasaShowcase({ act }) {
         ))}
 
         {/* Rel nomor hidangan — gema rel fase pada referensi */}
-        <div className="absolute top-1/2 left-5 z-20 flex -translate-y-1/2 flex-col items-center gap-5 text-paper mix-blend-difference md:left-8">
+        <div className="absolute top-1/2 left-5 z-20 hidden -translate-y-1/2 flex-col items-center gap-5 text-paper mix-blend-difference md:left-8 md:flex">
           <div className="relative flex flex-col items-center gap-5">
             <motion.span
               style={{ scaleY: spineScale }}

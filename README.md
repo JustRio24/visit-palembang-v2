@@ -35,6 +35,17 @@ mendapat gambarnya sendiri.
 
 ## Fitur
 
+- **Pita kursor** — satu pita sutra mengikuti penunjuk, diadaptasi
+  dari komponen Ribbons milik React Bits (WebGL2): berwarna kertas
+  Musi Perak dengan mix-blend-difference persis bilah kemajuan di
+  tepi atas, jadi ia terang di babak gelap dan gelap di babak terang.
+  Mati otomatis di perangkat sentuh murni dan mode gerak dikurangi.
+- **Preloader sinematik** — tirai tinta tempat sapaan “halo” keliling
+  dunia bergantian tampil selama memuat (こんにちは, 안녕하세요, Bonjour,
+  Hola, 你好, مرحبا, dan lainnya), lalu selalu ditutup dua sapaan
+  terakhir — Hello, kemudian Halo — sebelum tirai terangkat. Penghitung
+  persennya mengejar tonggak muat nyata (DOM, poster hero, kesiapan
+  video, window load); maks. 6 detik apa pun yang terjadi.
 - **Dwibahasa ID / EN** — seluruh teks situs (termasuk keterangan foto
   dan info praktis) tersedia dalam Bahasa Indonesia dan Inggris lewat
   pemilih `ID | EN`; pilihan tersimpan di `localStorage`.
@@ -50,6 +61,9 @@ mendapat gambarnya sendiri.
   khusus untuk scrub (keyframe rapat, tanpa audio, faststart).
 - **Rel navigasi babak** di sisi kanan dengan penanda babak aktif,
   plus tautan jangkar antarbabak.
+- **Responsif penuh** — tata letak hape diaudit per babak (judul hero
+  diskalakan vw, foto pembuka Babak I tampil di atas teks, rel fase
+  Babak III khusus desktop, zoom gerbang lebih landai di layar potret).
 
 ## Teknologi
 
@@ -127,8 +141,10 @@ Situs ini memakai karya berlisensi bebas; atribusi lengkap disimpan di sini.
   Commons, CC BY-SA 4.0.
 - **Foto di dalam gerbang** (Ampera malam hari) — **Gunawan Kartapranata**
   via Wikimedia Commons, CC BY-SA 3.0.
+- **Foto Al-Qur'an Akbar** (unggulan Babak II) — **baka_neko_baka** via
+  Flickr, CC BY 2.0.
 - **Foto-foto pengganti babak** — via Wikimedia Commons (CC BY / CC BY-SA):
-  D.W. Fisher-Freberg, fitri agung, Oka1302, The Bangsawan, Midori,
+  D.W. Fisher-Freberg, fitri agung, Oka1302, Midori,
   Swarabakti, Gunawan Kartapranata, Amr.photos, Cendy00.
 - **Gending Sriwijaya** — foto warisan v1 (540×720) yang diperbesar 2×
   dengan upscaler AI (EDSR) menjadi 1080×1440; hingga kini tidak ditemukan

@@ -60,6 +60,7 @@ export function LangToggle({ className = '' }) {
 
 export const ui = {
   // Prolog
+  loadingJourney: { id: 'MEMUAT PERJALANAN', en: 'LOADING THE JOURNEY' },
   prologEst: { id: 'EST. 682 M', en: 'EST. 682 CE' },
   prologKicker: {
     id: 'SUMATERA SELATAN · KOTA DI ATAS AIR',

@@ -17,7 +17,7 @@ function IntroPanel({ act, progress }) {
   const { lang } = useLang()
   const imgX = useTransform(progress, [0, 0.25], [-24, 24])
   return (
-    <div className="relative grid h-full w-screen shrink-0 grid-cols-1 items-center gap-8 px-6 pt-14 pb-24 md:grid-cols-[46%_54%] md:px-14">
+    <div className="relative grid h-full w-screen shrink-0 grid-cols-1 items-center gap-5 px-6 pt-16 pb-24 md:grid-cols-[46%_54%] md:gap-8 md:px-14 md:pt-14">
       <span
         aria-hidden
         className="angka-babak pointer-events-none absolute -top-10 right-0 font-display text-[36vw] leading-none font-bold select-none"
@@ -29,16 +29,16 @@ function IntroPanel({ act, progress }) {
           <span className="h-px w-12 bg-paper/40" />
           {act.label[lang].toUpperCase()} — {ui.sungaiGallery[lang]}
         </p>
-        <h2 className="font-display text-6xl leading-[0.95] font-semibold tracking-tight md:text-8xl">
+        <h2 className="font-display text-5xl leading-[0.95] font-semibold tracking-tight md:text-8xl">
           {act.titleLines[lang][0]}<br />
           {act.titleLines[lang][1]}
         </h2>
-        <p className="mt-8 max-w-xl text-lg leading-relaxed text-silver">{act.lead[lang]}</p>
-        <p className="mt-10 font-mono text-[11px] tracking-[0.35em] text-paper/60">
+        <p className="mt-5 max-w-xl text-base leading-relaxed text-silver md:mt-8 md:text-lg">{act.lead[lang]}</p>
+        <p className="mt-10 hidden font-mono text-[11px] tracking-[0.35em] text-paper/60 md:block">
           {ui.sungaiHint[lang]}
         </p>
       </div>
-      <div className="relative hidden h-[74vh] overflow-hidden md:block">
+      <div className="relative order-first h-[24vh] overflow-hidden md:order-none md:h-[74vh]">
         <motion.img
           src={act.introImg}
           alt={ui.sungaiIntroAlt[lang]}

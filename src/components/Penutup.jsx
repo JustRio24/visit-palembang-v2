@@ -16,6 +16,16 @@ import { useLang, ui } from '../i18n.jsx'
 
 export default function Penutup() {
   const { lang } = useLang()
+  // Di layar potret, bingkai foto lanskap terpotong sempit — zoom awal
+  // dibuat lebih landai agar dua menara tetap terbaca sebagai gerbang.
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 767px)')
+    const update = () => setIsMobile(mq.matches)
+    update()
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
   const INFO = ui.infoItems[lang]
   const sceneRef = useRef(null)
   const { scrollYProgress } = useScroll({
@@ -24,7 +34,11 @@ export default function Penutup() {
   })
 
   // Gerbang: membesar berakselerasi menuju celah ant menara
-  const gateScale = useTransform(scrollYProgress, [0, 0.45, 0.7, 0.85], [1.5, 1.85, 2.9, 5.2])
+  const gateScale = useTransform(
+    scrollYProgress,
+    [0, 0.45, 0.7, 0.85],
+    isMobile ? [1.08, 1.3, 2.1, 4.4] : [1.5, 1.85, 2.9, 5.2],
+  )
   const gateDrift = useTransform(scrollYProgress, [0, 0.85], ['0%', '3.5%'])
   const gateOpacity = useTransform(scrollYProgress, [0.84, 0.9], [1, 0])
   // Lapisan ambang: bingkai gelap yang menyapu lewat lebih cepat (paralaks)
