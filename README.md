@@ -148,10 +148,11 @@ Situs ini memakai karya berlisensi bebas; atribusi lengkap disimpan di sini.
 - **Foto-foto pengganti babak** — via Wikimedia Commons (CC BY / CC BY-SA):
   D.W. Fisher-Freberg, fitri agung, Oka1302, Midori,
   Swarabakti, Gunawan Kartapranata, Amr.photos, Cendy00.
-- **Gending Sriwijaya** — foto warisan v1 (540×720) yang diperbesar 2×
-  dengan upscaler AI (EDSR) menjadi 1080×1440; hingga kini tidak ditemukan
-  foto tarian ini berlisensi bebas pada resolusi lebih tinggi. Berkas asli
-  tersimpan di `arsip-aset-v1/`.
+- **Gending Sriwijaya** — foto warisan v1 (540×720) yang direstorasi
+  dengan upscaler GAN Real-ESRGAN (4× lalu diturunkan ke 1440×1920 plus
+  grain film halus); hingga kini tidak ditemukan foto tarian ini
+  berlisensi bebas pada resolusi lebih tinggi. Berkas asli dan versi
+  EDSR sebelumnya tersimpan di `arsip-aset-v1/`.
 - Sebagian foto lain diwarisi dari repositori v1
   ([JustRio24/Visit-Palembang](https://github.com/JustRio24/Visit-Palembang)).
 
